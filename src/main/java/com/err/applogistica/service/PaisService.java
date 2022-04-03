@@ -8,4 +8,9 @@ import java.util.List;
 public interface PaisService {
 
     ResponseDto<List<Pais>> getPaises();
+
+    List<Pais> findAllPaises ();
+
+    Pais findOneById(Long idPais);
+
 }

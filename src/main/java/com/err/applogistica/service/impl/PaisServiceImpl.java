@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,5 +35,30 @@ public class PaisServiceImpl implements PaisService {
             logger.error("Error " + e);
             return paisResponseDto;
         }
+    }
+
+    @Override
+    public List<Pais> findAllPaises() {
+        List<Pais> paisesList = new ArrayList<>();
+        try {
+            paisesList = paisRepository.findAll();
+
+        }catch (Exception e){
+            logger.error("Error " + e);
+        }
+        return paisesList;
+    }
+
+    @Override
+    public Pais findOneById(Long idPais) {
+        Pais pais = new Pais();
+
+        try{
+            pais = paisRepository.getById(idPais);
+        }catch (Exception e){
+            logger.error("Error " + e);
+        }
+
+        return pais;
     }
 }

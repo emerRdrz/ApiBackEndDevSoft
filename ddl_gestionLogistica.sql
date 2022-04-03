@@ -38,7 +38,7 @@ CREATE TABLE db_gestionlogistica.tipo_bodega
 CREATE TABLE db_gestionlogistica.tipo_producto
 (
     id_tipo_producto int not null primary key auto_increment,
-    descripcion         char(50),
+    descripcion         char(100),
     enable              boolean
 );
 
@@ -161,6 +161,15 @@ INSERT INTO `db_gestionlogistica`.`bodega` (`id_tipo_bodega`, `id_pais`, `descri
 INSERT INTO `db_gestionlogistica`.`bodega` (`id_tipo_bodega`, `id_pais`, `descripcion`, `direccion`, `enable`) VALUES ('1', '4', 'Bodega terreste B', 'ubicación bodega B', '1');
 INSERT INTO `db_gestionlogistica`.`bodega` (`id_tipo_bodega`, `id_pais`, `descripcion`, `direccion`, `enable`) VALUES ('2', '4', 'Bodega marítima A', 'ubicación bodega A', '1');
 INSERT INTO `db_gestionlogistica`.`bodega` (`id_tipo_bodega`, `id_pais`, `descripcion`, `direccion`, `enable`) VALUES ('2', '4', 'Bodega marítima B', 'ubicación bodega B', '1');
+
+
+INSERT INTO `db_gestionlogistica`.`tipo_producto` (`descripcion`, `enable`) VALUES ('Maquinaria y equipo de transporte', '1');
+INSERT INTO `db_gestionlogistica`.`tipo_producto` (`descripcion`, `enable`) VALUES ('Productos químicos', '1');
+INSERT INTO `db_gestionlogistica`.`tipo_producto` (`descripcion`, `enable`) VALUES ('Artículos manufacturados', '1');
+INSERT INTO `db_gestionlogistica`.`tipo_producto` (`descripcion`, `enable`) VALUES ('Petróleo crudo y sus derivados', '1');
+INSERT INTO `db_gestionlogistica`.`tipo_producto` (`descripcion`, `enable`) VALUES ('Cereales y preparados de cereales ', '1');
+INSERT INTO `db_gestionlogistica`.`tipo_producto` (`descripcion`, `enable`) VALUES ('Legumbres y frutas', '1');
+
 
 
 
